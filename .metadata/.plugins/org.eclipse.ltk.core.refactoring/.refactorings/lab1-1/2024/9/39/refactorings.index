@@ -1,0 +1,19 @@
+1727086481712	Delete element
+1727088862186	Delete element
+1727088930351	Delete element
+1727089212276	Rename type 'CarBosy'
+1727091155919	Encapsulate field 'id, ...'
+1727091761099	Rename type 'Car'
+1727091776000	Encapsulate field 'carBody, ...'
+1727091784564	Encapsulate field 'color, ...'
+1727093707921	Encapsulate field 'VIN, ...'
+1727093714686	Encapsulate field 'producedCars, ...'
+1727093988372	Encapsulate field 'vin, ...'
+1727094244463	Encapsulate field 'carName, ...'
+1727094408334	Rename type 'CarBody'
+1727094476371	Rename type 'Car'
+1727094497903	Rename type 'CarModel'
+1727096024891	Encapsulate field 'cost, ...'
+1727112523162	Delete element
+1727114713892	Delete element
+1727126504765	Delete element

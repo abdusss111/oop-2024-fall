@@ -1,0 +1,31 @@
+package week3;
+
+public class Horse extends Animal {
+	private double height;
+	private String color;
+	
+	public Horse() {
+		
+	}
+//	public Horse(double height, String color) {
+//		this.height = height;
+//		this.color = color;
+//	}
+	public Horse(String name, int age, double height, String color) {
+		super(name, age);
+		this.height = height;
+		this.color = color;	
+	}
+	
+	public double getHeight() {
+		return this.height;
+	}
+	
+	public String getColor() {
+		return this.color;
+	}
+	
+	public String toString() {
+		return super.toString() + "color: " + this.color + ", height:" + this.height ;
+	}
+}

@@ -1,0 +1,13 @@
+package practice4;
+
+public class Circle extends Shape {
+	int pos;
+	Color color;
+	public Circle() {
+		
+	}
+	public Circle(int pos, Color color) {
+		super(pos, color);
+	}
+
+}

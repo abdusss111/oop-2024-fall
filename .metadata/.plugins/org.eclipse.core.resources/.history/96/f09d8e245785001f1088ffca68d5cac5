@@ -1,0 +1,26 @@
+package week3;
+
+public class Animal {
+	private String name;
+	private int age;
+	
+	public Animal() {
+		
+	}
+	public Animal(int age) {
+		this.age = age;
+	}
+	public Animal(String name) {
+		this.name = name;
+	}
+	public Animal(String name, int age) {
+		this(name);
+		this.age = age;
+	}
+	
+	public String toString() {
+		return "name: " + name + "age" + age;
+	}
+	
+	
+}

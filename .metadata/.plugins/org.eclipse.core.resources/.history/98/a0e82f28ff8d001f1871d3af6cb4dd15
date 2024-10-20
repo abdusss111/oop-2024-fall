@@ -1,0 +1,19 @@
+package lab2Task1;
+
+import java.util.Vector;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Cylinder c1 = new Cylinder(10, 15);
+		Sphere s1 = new Sphere(5);
+		Cube cube1 = new Cube(7);
+		Vector <Shape3D> vector = new Vector<>();
+		vector.add(c1);
+		vector.add(s1);
+		vector.add(cube1);
+
+		
+	}
+
+}

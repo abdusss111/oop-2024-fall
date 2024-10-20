@@ -1,0 +1,21 @@
+package lab2;
+
+public class Cube extends Shape3D  {
+	private int side;
+	public Cube() {
+		
+	}
+	
+	public Cube(int side) {
+		this.side = side;
+	}
+	
+	public double volume() {
+		return side * side * side;
+	}
+
+	public double surfaceArea() {
+		return 6 * side * side;	
+	}
+
+}
