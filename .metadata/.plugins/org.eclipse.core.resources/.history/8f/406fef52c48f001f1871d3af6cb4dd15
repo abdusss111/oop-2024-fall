@@ -1,0 +1,13 @@
+package taskC;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Shirt sh1 = new Shirt("Favorite", Type.CLASSIC, Season.FALL);
+		Shirt sh2 = new Shirt("Favorite", Type.CLASSIC, Season.FALL);
+		Shirt sh3 = sh1
+
+		System.out.println(sh1.equals(sh1));
+	}
+
+}

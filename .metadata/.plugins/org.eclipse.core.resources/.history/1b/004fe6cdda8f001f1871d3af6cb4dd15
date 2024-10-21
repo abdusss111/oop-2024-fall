@@ -1,0 +1,10 @@
+package problem2;
+import problem2.Position;
+public abstract class Piece {
+	Position a;
+	public abstract boolean isLegalMove(Position b);
+	
+	public String toString() {
+		
+	}
+}
