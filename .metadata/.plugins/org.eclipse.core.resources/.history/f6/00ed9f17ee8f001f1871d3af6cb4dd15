@@ -1,0 +1,11 @@
+package problem2;
+
+public class Rook extends Piece {
+
+	@Override
+	public boolean isLegalMove(Position b) {
+		if(!this.a.equalColumns(b) || !this.a.equalRows(b))return false;
+		return true;
+	}
+	
+}

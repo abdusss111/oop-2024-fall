@@ -1,0 +1,12 @@
+package problem3;
+
+public class CheckingAccount extends Account {
+	private int transactions;
+	private int freeTransactions = 3;
+	
+	public void deductFee() {
+		if (freeTransactions == 0){
+			this.withdraw(0.02);
+		}
+	}
+}

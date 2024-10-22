@@ -1,0 +1,16 @@
+package problem2;
+
+public class Rook extends Piece {
+
+	public Rook(Position a, Color color) {
+		super(a, color);
+	}
+	
+	@Override
+	public boolean isLegalMove(Position b) {
+		if((this.columnDifference(b) != 0 && this.rowDifference(b) == 0) && (this.columnDifference(b) == 0 && this.rowDifference(b) != 0))return false;
+		
+		return true;
+	}
+	
+}

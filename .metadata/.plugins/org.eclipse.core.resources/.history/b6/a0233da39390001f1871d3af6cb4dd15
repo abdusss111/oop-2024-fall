@@ -1,0 +1,24 @@
+package problem2;
+
+public class Board {
+	public String drawBoard() {
+		String result = "";
+		String columns = "87654321";
+		String rows = "abcdefgh";
+		result += "  ";
+		for(int i = 0; i < 8; i++) result += rows.charAt(i) + " ";
+		for(int i = 0; i < 8; i++) {
+			result += columns.charAt(i);
+			for(int j = 0; j < 8; j++) {
+				result += " |q| ";
+
+			}
+			result += "\n" ;
+			result += "\n" ;
+
+		}
+		return result;
+	}
+	
+	public Board() {}
+}

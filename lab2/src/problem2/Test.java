@@ -3,16 +3,30 @@ package problem2;
 public class Test {
 
 	public static void main(String[] args) {
-		Position pos = new Position('h', 8);
-		Position pos2 = new Position('a', 1);
+		
+		Board b = new Board();
 
-		System.out.println(pos);
-		System.out.println(pos.equals(pos2));
-		System.out.println(pos.hashCode());
-		System.out.println(pos2.hashCode());
+		System.out.println(b.drawBoard());
+		
+		Position pos3 = new Position('h', 4);
+		Position pos33 = new Position('d', 8);
+		Queen king = new Queen(pos3, Color.WHITE);
+		b.takePosition(king);
+		System.out.println(b.drawBoard());
+
+		king.move(pos33, b);
+		b.takePosition(king);
+		System.out.println(b.drawBoard());
+		
+		Position pos5 = new Position('h', 8);
+		Queen queen = new Queen(pos5, Color.WHITE);
+		b.takePosition(queen);
+		
+		Position pos6 = new Position('d', 4);
+		Knight knight = new Knight(pos6, Color.WHITE);
+		b.takePosition(knight);
 		
 		
-
 	}
 
 }

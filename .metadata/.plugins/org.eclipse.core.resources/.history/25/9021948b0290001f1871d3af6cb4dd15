@@ -1,0 +1,28 @@
+package problem4;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Circuit a = new Resistor(3.0);
+        Circuit b = new Resistor(4.0);
+        Circuit c = new Resistor(5.0);
+        Circuit d = new Resistor(6.0);
+        Circuit e = new Resistor(1.0);
+
+        Circuit f = new Series(a, b); // a and b in series
+        Circuit g = new ParallelCircuit(c, d); // c and d in parallel
+        Circuit h = new Series(g, e); // g and e in series
+        Circuit circuit = new Parallel(h, f); // h and f in parallel
+
+        // Get total equivalent resistance
+        double R = circuit.getResistance();
+        System.out.println("Equivalent Resistance: " + R + " Ohms");
+
+        // Applying potential difference and checking power/current
+        double V = 12; // Example voltage
+        circuit.applyPotentialDiff(V);
+        System.out.println("Power: " + circuit.getPower() + " Watts");
+        System.out.println("Current: " + circuit.getCurrent() + " Amps");
+	}
+
+}

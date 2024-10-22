@@ -1,0 +1,17 @@
+package problem2;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Position pos = new Position('h', 2);
+		Position pos2 = new Position('h', 4);
+		Pawn p1 = new Pawn(pos, Color.BLACK);
+		
+		System.out.println(p1.isLegalMove(pos2));
+		System.out.println(p1.rowDifference(pos2));
+
+		
+
+	}
+
+}

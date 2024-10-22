@@ -1,0 +1,23 @@
+package problem2;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Position pos = new Position('d', 4);
+		Position pos2 = new Position('g', 1);
+		Bishop p1 = new Bishop(pos, Color.BLACK);
+		Bishop p2 = new Bishop(pos, Color.WHITE);
+		
+		System.out.println(p1.isLegalMove(pos2));
+		System.out.println(p1.rowDifference(pos2));
+		System.out.println(p1.columnDifference(pos2));
+
+		System.out.println(p2.isLegalMove(pos2));
+		System.out.println(p2.rowDifference(pos2));
+		System.out.println(p1.columnDifference(pos2));
+
+		
+
+	}
+
+}

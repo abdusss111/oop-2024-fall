@@ -1,0 +1,40 @@
+public class CheckingAccount extends Account {
+    private int transactionCount;
+    private int freeTransactions = 3;
+    private double transactionFee = 0.02;
+
+    public CheckingAccount(int a) {
+        super(a);
+        this.transactionCount = 0;
+    }
+
+    @Override
+    public void deposit(double sum) {
+        super.deposit(sum);
+        transactionCount++;
+        if (transactionCount > freeTransactions) {
+            deductFee();
+        }
+    }
+
+    @Override
+    public void withdraw(double sum) {
+        super.withdraw(sum);
+        transactionCount++;
+        if (transactionCount > freeTransactions) {
+            deductFee();
+        }
+    }
+
+    public void deductFee() {
+        if (transactionCount > freeTransactions) {
+            setBalance(getBalance() - transactionFee);
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "CheckingAccount{" + "balance=" + getBalance() + ", accountNumber=" + getAccountNumber() +
+               ", transactionCount=" + transactionCount + '}';
+    }
+}

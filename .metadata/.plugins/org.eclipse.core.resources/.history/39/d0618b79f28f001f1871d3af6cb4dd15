@@ -1,0 +1,15 @@
+package problem2;
+
+public class Bishop extends Piece {
+	public Bishop(Position a, Color color) {
+		super(a, color);
+	}
+
+	@Override
+	public boolean isLegalMove(Position b) {
+		boolean isColumnChanged = this.columnDifference(b) != 0;
+		boolean isRowChanged = this.rowDifference(b) != 0;
+		if(isColumnChanged && isRowChanged)return true;
+		return false;
+	}
+}

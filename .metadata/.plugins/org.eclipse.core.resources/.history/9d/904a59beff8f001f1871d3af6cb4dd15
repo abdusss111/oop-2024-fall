@@ -1,0 +1,6 @@
+package problem3;
+
+public class CheckingAccount extends Account {
+	private int transactions;
+	private int freeTransacitons = 3;
+}

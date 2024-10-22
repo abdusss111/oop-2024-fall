@@ -1,0 +1,16 @@
+package problem2;
+
+public class Pawn extends Piece {
+	
+	
+	@Override
+	public boolean isLegalMove(Position b) {
+		if (this.a.rowDifference(b) == 2 && (this.a.getRow() == 7 || this.a.getRow() == 1)) return true;
+		return false;
+	}
+	
+	public String toString() {
+		return "Pawn " + super.toString();
+	}
+	
+}

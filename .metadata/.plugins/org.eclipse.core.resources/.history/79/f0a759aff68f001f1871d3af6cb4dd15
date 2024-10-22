@@ -1,0 +1,23 @@
+package problem2;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Position pos = new Position('f', 5);
+		Position pos2 = new Position('e', 6);
+		King p1 = new King(pos, Color.BLACK);
+		King p2 = new King(pos, Color.WHITE);
+		
+		System.out.println(p1.isLegalMove(pos2));
+		System.out.println(p1.rowDifference(pos2));
+		System.out.println(p1.columnDifference(pos2));
+
+		System.out.println(p2.isLegalMove(pos2));
+		System.out.println(p2.rowDifference(pos2));
+		System.out.println(p1.columnDifference(pos2));
+
+		
+
+	}
+
+}

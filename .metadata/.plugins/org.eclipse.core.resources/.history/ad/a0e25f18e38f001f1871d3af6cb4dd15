@@ -1,0 +1,17 @@
+package problem2;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Position pos = new Position('h', 7);
+		Position pos2 = new Position('d', 5);
+		Pawn p1 = new Pawn(pos, Color.BLACK);
+		
+		System.out.println(pos.getColumn());
+		System.out.println(p1.a.rowDifference(pos2));
+
+		
+
+	}
+
+}

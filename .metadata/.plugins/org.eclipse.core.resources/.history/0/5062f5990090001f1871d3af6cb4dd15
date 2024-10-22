@@ -1,0 +1,42 @@
+package problem3;
+
+public class Account{
+	private double balance; 
+	private int accNumber; 
+	public Account(int a){
+		balance = 0.0;
+		accNumber = a;
+	}
+	public void deposit(double sum) {
+		
+	}
+	
+	public void withdraw(double sum) {
+		balance -= sum;
+	}
+	
+	public double getBalance() {
+		return this.balance;
+	}
+	public double getAccountNumber() {
+		return this.accNumber;
+	}
+	public void setBalance(double balance) {
+		this.balance = balance;
+	}
+	public void setAccNumber(int accNumber) {
+		this.accNumber = accNumber;
+	}
+	public void transfer(double amount, Account other) { 
+		balance -= amount;
+		other.deposit(amount);
+
+	}
+	public String toString() {
+		return "balance: " + this.balance +", account number: " + this.accNumber;
+	}
+	public final void print() {
+	System.out.println(toString());
+	}
+	
+}

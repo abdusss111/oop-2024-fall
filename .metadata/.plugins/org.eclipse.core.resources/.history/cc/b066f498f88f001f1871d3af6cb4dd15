@@ -1,0 +1,11 @@
+package problem2;
+
+public class Knight extends Piece {
+
+	@Override
+	public boolean isLegalMove(Position b) {
+		if((this.columnDifference(b) == 2 && this.rowDifference(b) == 1) || (this.columnDifference(b) == 1 && this.rowDifference(b) == 2));
+		return false;
+	}
+
+}

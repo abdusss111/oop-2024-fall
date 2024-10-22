@@ -1,0 +1,56 @@
+package problem2;
+
+public class Board {
+    private String[][] board;
+
+    public Board() {
+        board = new String[8][8];
+        initializeBoard();
+    }
+
+    private void initializeBoard() {
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                board[i][j] = " |p| ";
+            }
+        }
+    }
+
+    public String drawBoard() {
+        String result = "";
+        String columns = "87654321";
+        String rows = "abcdefgh";
+
+        result += "   ";
+        for (int i = 0; i < 8; i++) {
+            result += " " + rows.charAt(i) + "   "; 
+        }
+        result += "\n";
+
+        for (int i = 0; i < 8; i++) {
+            result += columns.charAt(i) + " ";
+            for (int j = 0; j < 8; j++) {
+                result += board[i][j];
+            }
+            result += "\n\n";
+        }
+
+        return result;
+    }
+
+//    public void setPiece(Position a, String piece) {
+////    	int row = a.getRow();
+////    	int column = (a.getColumn())-96;
+////        if (row >= 0 && row < 8 && column >= 0 && column < 8) {
+////            board[row][column] = piece;
+//        }
+//    }
+
+    // Method to get a piece at a specific position
+    public String getPiece(int row, int col) {
+        if (row >= 0 && row < 8 && col >= 0 && col < 8) {
+            return board[row][col];
+        }
+        return null;  // Return null if out of bounds
+    }
+}

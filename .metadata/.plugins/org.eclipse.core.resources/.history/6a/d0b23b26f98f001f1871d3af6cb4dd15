@@ -1,0 +1,15 @@
+package problem2;
+
+public class Knight extends Piece {
+
+	public Knight(Position a, Color color) {
+		super(a, color);
+	}
+	
+	@Override
+	public boolean isLegalMove(Position b) {
+		if((Math.abs(this.columnDifference(b)) == 2 && Math.abs(this.rowDifference(b)) == 1) || (Math.abs(this.columnDifference(b)) == 1 && Math.abs(this.rowDifference(b)) == 2));
+		return false;
+	}
+
+}

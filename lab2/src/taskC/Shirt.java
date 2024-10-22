@@ -32,8 +32,7 @@ public class Shirt extends Cloth {
 	
 	@Override
 	public boolean equals(Object obj) {
-		if(this == obj) return true;
-		if(!(obj instanceof Shirt)) return false;
+
 	    if (!super.equals(obj)) return false;
 		Shirt sh = (Shirt)obj;
 		return Objects.equals(title, sh.title);

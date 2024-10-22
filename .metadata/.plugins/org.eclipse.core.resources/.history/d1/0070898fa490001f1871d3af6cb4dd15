@@ -1,0 +1,37 @@
+package problem2;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		Board b = new Board();
+
+		System.out.println(b.drawBoard());
+		
+		Position pos3 = new Position('e', 4);
+		Position pos33 = new Position('e', 5);
+		King king = new King(pos3, Color.WHITE);
+		b.takePosition(king);
+		System.out.println(b.drawBoard());
+
+		king.move(pos33, b);
+		b.takePosition(king);
+		System.out.println(b.drawBoard());
+
+		
+		
+		
+		Position pos5 = new Position('h', 8);
+		Queen queen = new Queen(pos5, Color.WHITE);
+		b.takePosition(queen);
+		
+		Position pos6 = new Position('d', 4);
+		Knight knight = new Knight(pos6, Color.WHITE);
+		b.takePosition(knight);
+		
+//		System.out.println(b.drawBoard());
+
+		
+	}
+
+}

@@ -1,0 +1,35 @@
+package problem2;
+
+public class Board {
+    private String[][] board;
+	public String result = "";
+
+	private void initializeBoard() {
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                board[i][j] = " |p| "; 
+            }
+        }
+    }
+	
+	public String drawBoard() {
+		String columns = "87654321";
+		String rows = "abcdefgh";
+		result += "   ";
+		for(int i = 0; i < 8; i++) result += rows.charAt(i) + "    ";
+		result += "\n" ;
+
+		for(int i = 0; i < 8; i++) {
+			result += columns.charAt(i);
+			for(int j = 0; j < 8; j++) {
+				result += " |p| ";
+
+			}
+			result += "\n\n" ;
+
+		}
+		return result;
+	}
+	
+	public Board() {}
+}

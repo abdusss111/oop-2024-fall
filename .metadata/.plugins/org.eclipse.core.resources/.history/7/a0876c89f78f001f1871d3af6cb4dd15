@@ -1,0 +1,15 @@
+package problem2;
+import problem2.Bishop;
+import problem2.Rook;
+
+public class Queen extends Piece {
+	
+	public Queen(Position a, Color color) {
+		super(a, color);
+	}
+	
+	public boolean isLegalMove(Position b) {
+		if (islegalMove()
+		return false;
+	}
+}

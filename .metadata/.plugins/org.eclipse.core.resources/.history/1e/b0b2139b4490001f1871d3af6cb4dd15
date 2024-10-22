@@ -1,0 +1,31 @@
+package problem5;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Person john = new Employee("John", 30, "Engineer");
+	    Person alice = new PhDStudent("Alice", 26, "Comp. Science");
+	    Person bob = new Student("Bob", 22, "Mathematics");
+
+	    Animal cat = new Cat("Murka", 5);
+	    Animal dog = new Dog("Rex", 3);
+
+
+	    
+	    bob.assignPet(rex);
+
+	    PersonRegistry registry = new PersonRegistry();
+	    registry.addPerson(john);
+	    registry.addPerson(alice);
+	    registry.addPerson(bob);
+
+	    registry.displayAllPeople();
+
+	    john.leavePetWith(alice);
+	    registry.displayAllPeople();
+
+	    john.retrievePetFrom(alice);
+	    registry.displayAllPeople();
+	}
+
+}

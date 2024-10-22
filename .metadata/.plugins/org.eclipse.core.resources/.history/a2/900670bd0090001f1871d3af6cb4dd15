@@ -1,0 +1,16 @@
+package problem3;
+
+public class SavingsAccount extends Account {
+	private double percentage;
+	public SavingsAccount(int a) {
+		super(a);
+		
+	}
+	public double getPercentage() {
+		return percentage;
+	}
+	public void setPercentage(double percentage) {
+		this.percentage = percentage;
+	}
+
+}

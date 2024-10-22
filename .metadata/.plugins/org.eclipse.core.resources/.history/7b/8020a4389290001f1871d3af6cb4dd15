@@ -1,0 +1,44 @@
+package problem2;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Position pos = new Position('d', 5); // knight
+		Position pos2 = new Position('c', 7);
+		Knight kn = new Knight(pos, Color.BLACK);
+		System.out.println(kn);
+		System.out.println(kn.isLegalMove(pos2));
+		
+		Position pos3 = new Position('d', 5); // bishop
+		Position pos4 = new Position('c', 7);
+		Bishop bsh = new Bishop(pos3, Color.WHITE);
+		System.out.println(bsh);
+		System.out.println(bsh.isLegalMove(pos4));
+		
+		Position pos5 = new Position('d', 5); // king
+		Position pos6 = new Position('c', 7);
+		King king = new King(pos5, Color.WHITE);
+		System.out.println(king);
+		System.out.println(king.isLegalMove(pos6));
+		
+		Position pos7 = new Position('d', 5); // pawn
+		Position pos8 = new Position('c', 7);
+		Pawn pawn = new Pawn(pos7, Color.WHITE);
+		System.out.println(pawn);
+		System.out.println(pawn.isLegalMove(pos8));
+		
+		Position pos9 = new Position('d', 5); // queen
+		Position pos10 = new Position('c', 7);
+		Queen queen = new Queen(pos9, Color.WHITE);
+		System.out.println(queen);
+		System.out.println(queen.isLegalMove(pos10));
+		
+		Position pos11 = new Position('d', 5); // rook
+		Position pos12 = new Position('c', 7);
+		Rook rook = new Rook(pos11, Color.WHITE);
+		System.out.println(rook);
+		System.out.println(rook.isLegalMove(pos12));
+
+	}
+
+}
