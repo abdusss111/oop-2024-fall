@@ -7,30 +7,24 @@ public class Test {
 		Board b = new Board();
 
 		System.out.println(b.drawBoard());
-	
+		
 		Position pos3 = new Position('h', 4);
+		Position pos33 = new Position('d', 8);
 		Queen king = new Queen(pos3, Color.WHITE);
 		b.takePosition(king);
-		
-		
-		Position pos4 = new Position('g', 5);
-		Pawn pawn = new Pawn(pos4, Color.BLACK);
-		b.takePosition(pawn);
 		System.out.println(b.drawBoard());
 
-		System.out.println(king);
-
-		king.eat(pawn, b);
-		System.out.println(king);
-
+		king.move(pos33, b);
 		b.takePosition(king);
-		System.out.println(king);
-
-		System.out.println((king.isLegalMove(pawn.a) && !(pawn.a.isPositionEmpty(b)) &&  king.getColor() != pawn.getColor()));
 		System.out.println(b.drawBoard());
-
 		
-
+		Position pos5 = new Position('h', 8);
+		Queen queen = new Queen(pos5, Color.WHITE);
+		b.takePosition(queen);
+		
+		Position pos6 = new Position('d', 4);
+		Knight knight = new Knight(pos6, Color.WHITE);
+		b.takePosition(knight);
 		
 		
 	}

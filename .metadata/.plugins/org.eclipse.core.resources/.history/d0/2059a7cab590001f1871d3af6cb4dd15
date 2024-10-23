@@ -18,7 +18,7 @@ public abstract class Piece {
 		if(this.isLegalMove(piece.a) && !(piece.a.isPositionEmpty(board) &&  this.getColor() != piece.getColor())){
 			board.removePiece(this.a);
 			this.a = piece.a;
-			board.takePosition(piece);
+			board.takePosition(this);
 		}
 	}
 	public boolean isNoneZero(Position b) {

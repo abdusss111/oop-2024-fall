@@ -1,0 +1,24 @@
+package problem2;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		Board b = new Board();
+
+		System.out.println(b.drawBoard());
+	
+		Position pos3 = new Position('h', 4);
+		Queen king = new Queen(pos3, Color.WHITE);
+		b.takePosition(king);
+		System.out.println(b.drawBoard());
+		Position pos4 = new Position('g', 5);
+		Pawn pawn = new Pawn(pos4, Color.WHITE);
+		b.takePosition(pawn);
+		king.eat(pawn, b);
+	
+		
+		
+	}
+
+}

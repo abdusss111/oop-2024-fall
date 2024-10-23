@@ -15,10 +15,8 @@ public abstract class Piece {
 	};
 	
 	public void eat(Piece piece,Board board) {
-		if(this.isLegalMove(piece.a) && !(piece.a.isPositionEmpty(board) &&  this.getColor() != piece.getColor())){
-			board.removePiece(this.a);
-			this.a = piece.a;
-			board.takePosition(piece);
+		if(this.isLegalMove(piece.a) && !(piece.a.isPositionEmpty(board) &&  this.color != piece.getColor()){
+			
 		}
 	}
 	public boolean isNoneZero(Position b) {
