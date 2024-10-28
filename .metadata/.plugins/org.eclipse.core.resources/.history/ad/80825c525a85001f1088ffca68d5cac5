@@ -1,9 +1,0 @@
-package week3;
-
-public class AnimalHorseTest {
-	
-	Animal animal = new Animal();
-	Horse horse = new Horse("Aigyr", 5);
-	Horse horse2 = new Horse("Aigyr2", 7, 170.0, "black");
-
-}

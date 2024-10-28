@@ -31,15 +31,19 @@
 		<item key="org.eclipse.ui.internal.quickaccess.QuickAccessDialogDIALOG_USE_PERSISTED_SIZE" value="true"/>
 		<item key="org.eclipse.ui.internal.quickaccess.QuickAccessDialogDIALOG_USE_PERSISTED_LOCATION" value="false"/>
 		<list key="orderedElements">
+			<item value="search.in.help"/>
 			<item value="org.eclipse.jdt.ui.preferences.CleanUpPreferencePage"/>
 		</list>
 		<list key="orderedProviders">
+			<item value="search.help"/>
 			<item value="org.eclipse.ui.preferences"/>
 		</list>
 		<list key="textEntries">
 			<item value="1"/>
+			<item value="1"/>
 		</list>
 		<list key="textArray">
+			<item value="board[i][j]"/>
 			<item value="clean"/>
 		</list>
 	</section>

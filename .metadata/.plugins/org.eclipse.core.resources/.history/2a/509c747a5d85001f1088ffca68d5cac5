@@ -1,9 +1,0 @@
-package week3Task2;
-
-public class Test {
-	public static void main(String[] args) {
-		Staff worker = new Staff("worker", "tb59", "school", 10);
-		System.out.println(worker.toString());
-	}
-
-}

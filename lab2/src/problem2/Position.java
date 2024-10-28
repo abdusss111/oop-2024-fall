@@ -12,10 +12,10 @@ public class Position {
 		this.setColumn(column);
 	}
 	
-	public boolean isPositionEmpty(Board b){
+	public boolean isPositionEmpty(){
 		int i = Math.abs(row - 9)-1;
 		int j = column - 96 - 1;
-		return b.board[i][j] == " |.| ";
+		return Board.board[i][j] == " |.| ";
 	}
 	
 	public int getRow() {

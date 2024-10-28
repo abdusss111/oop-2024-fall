@@ -8,14 +8,14 @@ public abstract class Piece {
 	public abstract boolean isLegalMove(Position b);
 	
 	public void move(Position b, Board board) {
-		if(this.isLegalMove(b) && b.isPositionEmpty(board) ) {
+		if(this.isLegalMove(b) && b.isPositionEmpty() ) {
 			board.removePiece(this.a);
 			this.a = b;
 		}
 	};
 	
 	public void eat(Piece piece,Board board) {
-		if(this.isLegalMove(piece.a) && !(piece.a.isPositionEmpty(board) &&  this.getColor() != piece.getColor())){
+		if(this.isLegalMove(piece.a) && !(piece.a.isPositionEmpty() &&  this.getColor() != piece.getColor())){
 			board.removePiece(this.a);
 			this.a = piece.a;
 			board.takePosition(piece);

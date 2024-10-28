@@ -1,7 +1,7 @@
 package problem2;
 
 public class Board {
-    String[][] board;
+    static String[][] board;
 
     public Board() {
         board = new String[8][8];
@@ -16,10 +16,38 @@ public class Board {
         }
     }
     
+    public void createPiece(char column, int row, Color color, Pieces type) {
+    	Position pos = new Position(column, row);
+    	switch(type) {
+    	case PAWN:
+    		Pawn pawn = new Pawn(pos, color);
+    		this.takePosition(pawn);
+    	case KNIGHT:
+    		Knight knight = new Knight(pos, color);
+    		this.takePosition(knight);
+    	case ROOK:
+    		Rook rook = new Rook(pos, color);
+    		this.takePosition(rook);
+    	case KING:
+    		King king = new King(pos, color);
+    		this.takePosition(king);
+    	case QUEEN:
+    		Queen queen = new Queen(pos, color);
+    		this.takePosition(queen);
+    	case BISHOP:
+    		Bishop bishop = new Bishop(pos, color);
+    		this.takePosition(bishop);
+    	default:
+    		System.out.println("invalid type of piece");
+    	
+    	}
+    }
+    
+
     public void takePosition(Piece piece) {
     	int i = Math.abs(piece.a.getRow() - 9)-1;
     	int j = piece.a.getColumn() - 96 -1;
-    	this.board[i][j] = " |" + piece.toString().charAt(0) +"| ";
+    	Board.board[i][j] = " |" + piece.toString().charAt(0) +"| ";
     }
     
     public void removePiece(Position a) {
@@ -50,5 +78,7 @@ public class Board {
 
         return result;
     }
+    
+    
 
 }

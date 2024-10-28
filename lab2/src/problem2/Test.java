@@ -26,7 +26,7 @@ public class Test {
 		b.takePosition(king);
 		System.out.println(king);
 
-		System.out.println((king.isLegalMove(pawn.a) && !(pawn.a.isPositionEmpty(b)) &&  king.getColor() != pawn.getColor()));
+		System.out.println((king.isLegalMove(pawn.a) && !(pawn.a.isPositionEmpty()) &&  king.getColor() != pawn.getColor()));
 		System.out.println(b.drawBoard());
 
 		
