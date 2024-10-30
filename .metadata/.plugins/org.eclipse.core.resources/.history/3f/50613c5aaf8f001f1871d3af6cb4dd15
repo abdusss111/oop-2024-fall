@@ -1,5 +1,0 @@
-package taskC;
-
-public class Shirt extends Cloth {
-
-}

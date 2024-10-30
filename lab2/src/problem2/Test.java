@@ -18,13 +18,13 @@ public class Test {
 		b.takePosition(pawn);
 		System.out.println(b.drawBoard());
 
-		System.out.println(king);
+//		System.out.println(king);
 
 		king.eat(pawn, b);
-		System.out.println(king);
+//		System.out.println(king);
 
 		b.takePosition(king);
-		System.out.println(king);
+//		System.out.println(king);
 
 		System.out.println((king.isLegalMove(pawn.a) && !(pawn.a.isPositionEmpty()) &&  king.getColor() != pawn.getColor()));
 		System.out.println(b.drawBoard());

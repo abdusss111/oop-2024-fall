@@ -1,10 +1,10 @@
 package problem2;
 
 public class Board {
-    static String[][] board;
+    static Piece[][] board;
 
     public Board() {
-        board = new String[8][8];
+        board = new String[8][8]; // array of pieces;
         initializeBoard();
     }
 
@@ -15,32 +15,35 @@ public class Board {
             }
         }
     }
-    
-    public void createPiece(char column, int row, Color color, Pieces type) {
+ 
+    public void createPiece(Position p, Color color, Pieces type) {
     	Position pos = new Position(column, row);
+    	
+    	Piece p2 ;
     	switch(type) {
     	case PAWN:
-    		Pawn pawn = new Pawn(pos, color);
-    		this.takePosition(pawn);
+    	p = new Pawn(pos, color);
+    	
     	case KNIGHT:
     		Knight knight = new Knight(pos, color);
-    		this.takePosition(knight);
+    		
     	case ROOK:
     		Rook rook = new Rook(pos, color);
-    		this.takePosition(rook);
+    		
     	case KING:
     		King king = new King(pos, color);
-    		this.takePosition(king);
+    		
     	case QUEEN:
     		Queen queen = new Queen(pos, color);
-    		this.takePosition(queen);
+    		
     	case BISHOP:
     		Bishop bishop = new Bishop(pos, color);
-    		this.takePosition(bishop);
+    		
     	default:
     		System.out.println("invalid type of piece");
     	
     	}
+    	this.takePosition(p2);
     }
     
 

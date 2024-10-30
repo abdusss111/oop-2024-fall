@@ -1,9 +1,0 @@
-package taskC;
-
-public class Test {
-
-	public static void main(String[] args) {
-		Shirt sh1 = new Shirt();
-	}
-
-}
