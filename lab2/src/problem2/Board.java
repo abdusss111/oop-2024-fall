@@ -4,7 +4,7 @@ public class Board {
     static Piece[][] board;
 
     public Board() {
-        board = new String[8][8]; // array of pieces;
+        board = new Piece[8][8]; // array of pieces;
         initializeBoard();
     }
 
